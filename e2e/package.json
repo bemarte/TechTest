@@ -1,0 +1,18 @@
+{
+  "name": "api-tests",
+  "version": "1.0.0",
+  "description": "Testes de api do projeto TechTest",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Breno Martins",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "12.11"
+  },
+  "dependencies": {
+    "@shelex/cypress-allure-plugin": "^2.35.2",
+    "allure-commandline": "^2.18.1"
+  }
+}
