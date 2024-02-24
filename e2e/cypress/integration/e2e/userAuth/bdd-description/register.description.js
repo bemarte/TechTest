@@ -26,7 +26,6 @@ const testDescription = {
     <strong>E</strong> clico no botão <strong>"Continue"</strong> <br/>
     <strong>E</strong> clico no botão <strong>"Delete Account"</strong> <br/>
     <strong>ENTÃO</strong> devo ver a mensagem <strong>"ACCOUNT DELETED!"</strong> <br/>
-    <strong>E</strong> clico no botão <strong>"Continue"</strong>  
   </div>
   `
   }

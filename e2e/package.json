@@ -1,10 +1,13 @@
 {
-  "name": "api-tests",
+  "name": "e2e-tests",
   "version": "1.0.0",
-  "description": "Testes de api do projeto TechTest",
+  "description": "Testes de e2e do projeto TechTest",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:run:e2e": "cypress run --spec 'cypress/integration/e2e/' --env allure=true,allureResultsPath=cypress/allure-results --browser electron",
+    "allure:generate": "allure generate cypress/allure-results --clean -o cypress/allure-report",
+    "allure:open": "npm run allure:generate && allure open cypress/allure-report",
+    "teamsReport": "cypress-msteams-reporter --verbose --report-path cypress/allure-report/__Env.buildNumber__/widgets/status-chart.json --testEnv-path cypress/allure-report/__Env.buildNumber__/widgets/environment.json --report-url __EndToEndTest.AllureUrl__"
   },
   "author": "Breno Martins",
   "license": "ISC",

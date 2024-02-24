@@ -25,7 +25,8 @@ module.exports = defineConfig({
     env:{
       allure: true,
       allureResultsPath: 'cypress/allure-results',
-      allureAttachRequests:true
+      allureAttachRequests:true,
+      screenshotOnRunFailure: true, //necessário para ter o screenshot no teste que falhar
 
     },
     baseUrl: "https://automationexercise.com/",
