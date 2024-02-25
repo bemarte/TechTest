@@ -1,5 +1,5 @@
 import { selector } from "./selectors";
-import './register_Commands'
+import './register_commands'
 
 class Register{
     Cadastro(){
@@ -29,7 +29,7 @@ class Register{
         cy.get('#mobile_number').type('123456789');
         cy.get('[data-qa="create-account"]').click();
         cy.url().should('contains', 'https://automationexercise.com/account_created');
-        cy.url().should('contains', 'https://automationexercise.com/');
+        //cy.url().should('contains', 'https://automationexercise.com/');
         cy.contains('Congratulations! Your new account has been successfully created!').should('be.visible');
     }
 }
