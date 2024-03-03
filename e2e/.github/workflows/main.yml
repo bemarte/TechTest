@@ -13,9 +13,5 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          build: |
-            cd /e2e/  # Change to /e2e/ directory
-            npm run build
-          start: |
-            cd /e2e/  # Change to /e2e/ directory
-            npm start
+          build: npm run build
+          start: npm start
