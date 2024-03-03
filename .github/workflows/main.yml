@@ -11,7 +11,7 @@ jobs:
       - name: List current directory
         run: ls -la
       - name: Change to /e2e/ directory
-        run: cd e2e
+        run: cd $GITHUB_WORKSPACE/e2e
       - name: List current directory
         run: ls -la
       - name: Cypress run
