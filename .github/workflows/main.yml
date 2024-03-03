@@ -8,13 +8,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      # Change directory to /e2e/
-      - name: Change to e2e directory
-        run: cd /e2e/
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
+      - name: List current directory
+        run: ls -la
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          build: npm run build
-          start: npm start
+          build: |
+            ls -la  # List current directory for debugging
+            cd /e2e/  # Change to /e2e/ directory
+            npm run build
+          start: |
+            ls -la  # List current directory for debugging
+            cd /e2e/  # Change to /e2e/ directory
+            npm start
