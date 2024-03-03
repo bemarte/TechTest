@@ -12,12 +12,10 @@ jobs:
         run: ls -la
       - name: Change to /e2e/ directory
         run: cd e2e
+      - name: List current directory
+        run: ls -la
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          build: |
-            ls -la  # List current directory for debugging
-            npm run build
-          start: |
-            ls -la  # List current directory for debugging
-            npm start
+          build: npm run build
+          start: npm start
