@@ -18,11 +18,3 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
-
-//função que desabilita popup do navegador para salvar endereço 
-Cypress.on('before:browser:launch', (browser, launchOptions) => {
-    if (browser.name === 'chrome') {
-      launchOptions.args.push('--disable-popup-blocking', '--disable-extensions')
-    }
-    return launchOptions
-  })
