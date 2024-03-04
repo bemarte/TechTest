@@ -11,10 +11,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Instale o pnpm
-      - name: Install pnpm
-        run: npm install -g pnpm
-
       # Instale as dependências NPM, faça o cache corretamente
       # e execute todos os testes do Cypress
       - name: Cypress run
