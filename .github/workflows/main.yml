@@ -21,6 +21,6 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           working-directory: ./e2e
-          run: ls -la
-          build: npm run build
-          start: npm start
+          run: |
+            npm install
+            npm run cy:run:e2e 
