@@ -8,14 +8,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
+      # Navegue para a pasta /e2e
+      - name: Change to e2e directory
+        run: cd e2e
+      # Instale as dependências NPM, faça o cache corretamente
+      # e execute todos os testes do Cypress
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          build: |
-            cd /e2e/
-            npm run build
-          start: |
-            cd /e2e/
-            npm start
+          build: npm run build
+          start: npm start
