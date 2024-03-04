@@ -5,17 +5,15 @@ on: push
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
+        
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: List current directory
-        run: ls -la
-      - name: Change to /e2e/ directory
-        run: cd $GITHUB_WORKSPACE/e2e
-      - name: List current directory
-        run: ls -la
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
+          working-directory: /e2e/
           build: npm run build
           start: npm start
