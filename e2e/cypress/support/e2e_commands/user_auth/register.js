@@ -1,5 +1,5 @@
 import { selector } from "./selectors";
-import './register_commands'
+import './register_commands.js'
 
 class Register{
     Cadastro(){
