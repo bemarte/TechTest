@@ -4,6 +4,7 @@
   "description": "Testes de e2e do projeto TechTest",
   "main": "index.js",
   "scripts": {
+    "cy:run": "cypress run --spec 'cypress/integration/e2e/' --browser electron",
     "cy:run:e2e": "cypress run --spec 'cypress/integration/e2e/' --env allure=true,allureResultsPath=cypress/allure-results --browser electron",
     "allure:generate": "allure generate cypress/allure-results --clean -o cypress/allure-report",
     "allure:open": "npm run allure:generate && allure open cypress/allure-report",
